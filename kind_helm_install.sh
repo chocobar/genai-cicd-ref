@@ -71,7 +71,7 @@ done
 
 # Wait for Keycloak to be ready
 echo "Waiting for Keycloak to be ready..."
-kubectl wait --for=condition=ready pod -l app.kubernetes.io/name=keycloak --timeout=300s
+kubectl wait --for=condition=ready pod -l app.kubernetes.io/name=keycloak --timeout=600s
 
 if [ -n "$USE_LOCAL_HELM_CHART" ] && [ "$USE_LOCAL_HELM_CHART" != "false" ] && [ "$USE_LOCAL_HELM_CHART" != "" ]; then
   echo "Using local Helm chart..."
